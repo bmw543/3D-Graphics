@@ -123,8 +123,6 @@ class Triangle:
             max_x = math.ceil(width*((np.max(self.proj_vertices[:,0])/canvasx)+(1/2)))
             min_y = math.floor(height*(1*np.min(self.proj_vertices[:,1])+(1/2)))
             max_y = math.ceil(height*(1*np.max(self.proj_vertices[:,1])+(1/2)))
-            print(min_x, max_x, min_y, max_y)
-            print(self.proj_vertices[:,1])
             for x in range(min_x, max_x):
                 for y in range(min_y, max_y):
                     pixel = np.array([((-0.5 * canvasx) - (0.5 * (canvasx / width)) + (x * canvasx / width)),
@@ -147,7 +145,7 @@ def initscreen():
     return (screen)
 
 def draw(screen, pixel, color):
-    pygame.draw.circle(screen, color, pixel, 0)
+    pygame.draw.circle(screen, color, pixel, 1)
 
 def cross(A, B):
     return (A[0]*B[1]) - (A[1] * B[0])
