@@ -164,9 +164,7 @@ def run():
 
     while(True):
         for i in range(triangles.shape[0]):
-            print(i)
+            print("tri " + str(i + 1))
             triangle = Triangle(vertices[i], triangles[i][3])
-            #print(camera.matrix)
-            #print(triangle.vertices)
             triangle.render(screen, camera)
 run()
