@@ -2,7 +2,6 @@ import numpy as np
 from numpy import linalg as la
 import math
 import random
-import keyboard
 import pygame
 import time
 
